@@ -5,8 +5,8 @@
 	<artifactId>hw0-vgang</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<scm>
-		<connection>scm:git@github.com:Varuni/hw0-vgang.git</connection>
-		<developerConnection>scm:git@github.com:Varuni/hw0-vgang.git</developerConnection>
+		<connection>scm:git:git@github.com:Varuni/hw0-vgang.git</connection>
+		<developerConnection>scm:git:git@github.com:Varuni/hw0-vgang.git</developerConnection>
 	</scm>
 	<repositories>
 		<repository>
