@@ -2,9 +2,9 @@
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <primitive>true</primitive>
-  <annotatorImplementationName>SentenceAnnotator</annotatorImplementationName>
+  <annotatorImplementationName>PosTagAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
-    <name>Sentence_Annotator</name>
+    <name>PosTagAnnotator</name>
     <description/>
     <version>1.0</version>
     <vendor/>
@@ -19,12 +19,17 @@
     <fsIndexCollection/>
     <capabilities>
       <capability>
-        <inputs/>
-        <outputs>
+        <inputs>
           <type>edu.cmu.hw1.types.Sentence</type>
           <feature>edu.cmu.hw1.types.Sentence:SentenceId</feature>
           <feature>edu.cmu.hw1.types.Sentence:end</feature>
           <feature>edu.cmu.hw1.types.Sentence:begin</feature>
+        </inputs>
+        <outputs>
+          <type>edu.cmu.hw1.types.Noun</type>
+          <feature>edu.cmu.hw1.types.Noun:NounId</feature>
+          <feature>edu.cmu.hw1.types.Noun:end</feature>
+          <feature>edu.cmu.hw1.types.Noun:begin</feature>
         </outputs>
         <languagesSupported/>
       </capability>

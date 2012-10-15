@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Sun Oct 14 15:39:26 EDT 2012
+ * Updated by JCasGen Sun Oct 14 21:36:17 EDT 2012
  * @generated */
 public class Genemarker_Type extends Annotation_Type {
   /** @generated */
