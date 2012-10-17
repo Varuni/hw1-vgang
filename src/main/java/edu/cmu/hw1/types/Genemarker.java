@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Sun Oct 14 21:36:17 EDT 2012
- * XML source: /home/varuni/11791/hw1-vgang_old/src/main/resources/PosTagAnnotator.xml
+ * Updated by JCasGen Mon Oct 15 20:26:22 EDT 2012
+ * XML source: /home/varuni/11791/hw1-vgang_old/src/main/resources/GeneAnnotator.xml
  * @generated */
 public class Genemarker extends Annotation {
   /** @generated
