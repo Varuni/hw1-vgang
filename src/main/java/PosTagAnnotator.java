@@ -16,19 +16,24 @@ public class PosTagAnnotator extends JCasAnnotator_ImplBase {
   public void process(JCas aJCas) {
     FSIndex SentenceIndex = aJCas.getAnnotationIndex(Sentence.type);
     Iterator SentenceIterator = SentenceIndex.iterator();
+    
     while (SentenceIterator.hasNext()) {
+     
       Sentence sequenceId = (Sentence)SentenceIterator.next();
       //String originalDocument=aJCas.getDocumentText();
+      
       String sentenceText = aJCas.getDocumentText();
       // Splitting the sentence into token.
       PosTagNamedEntityRecognizer nounRecognizer;
     
       try {
         nounRecognizer = new PosTagNamedEntityRecognizer();
+        
         Map<Integer,Integer> GeneMap=nounRecognizer.getGeneSpans(sentenceText.substring(sequenceId.getBegin(),sequenceId.getEnd()));
         Iterator<Integer> genemapIterator=GeneMap.keySet().iterator();
-    
+        
     while(genemapIterator.hasNext()){
+
       Integer positionfirst=genemapIterator.next();
       Integer positionlast=GeneMap.get(positionfirst);
       Noun nounAnnotation=new Noun(aJCas);

@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Oct 15 20:26:22 EDT 2012
- * XML source: /home/varuni/11791/hw1-vgang_old/src/main/resources/GeneAnnotator.xml
+ * Updated by JCasGen Wed Oct 17 11:24:23 EDT 2012
+ * XML source: /home/varuni/11791/hw1-vgang_old/src/main/resources/descriptors/ner/PosTagAnnotator.xml
  * @generated */
 public class Noun extends Annotation {
   /** @generated

@@ -10,7 +10,7 @@
     <casProcessors casPoolSize="3" processingUnitThreadCount="1">
         <casProcessor deployment="integrated" name="CpeDescriptor">
             <descriptor>
-                <import location="GeneAnnotator.xml"/>
+                <import location="/home/varuni/11791/hw1-vgang_old/src/main/resources/descriptors/ner/aeDescriptor.xml"/>
             </descriptor>
             <deploymentParameters/>
             <errorHandling>

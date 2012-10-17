@@ -21,6 +21,7 @@ public class SentenceAnnotator extends JCasAnnotator_ImplBase {
       int firstPosition = 0;
         
         System.out.println("Starting Annotation of text");
+        
         for(int i=0;i<lines.length; i++){
         
         String[] token = lines[i].split(" "); // Splitting the sentence into token.
@@ -40,6 +41,6 @@ public class SentenceAnnotator extends JCasAnnotator_ImplBase {
         firstPosition = firstPosition + lines[i].length()+1; // resetting first position for the next line
         
         }
-      
+        
 }
 }

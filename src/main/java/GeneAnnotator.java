@@ -18,18 +18,21 @@ public class GeneAnnotator extends JCasAnnotator_ImplBase {
     // TODO Auto-generated method stub
     FSIndex NounIndex = aJCas.getAnnotationIndex(Noun.type);
     Iterator NounIterator = NounIndex.iterator();
-    
+ 
     BufferedReader file = null;
     final int max = 100000;
     //retrieving file names 
     ArrayList<String> list = new ArrayList<String>(max);
     String line;
     try {
+      
       file=new BufferedReader(new FileReader("/home/varuni/11791/hw1-vgang_old/genenames.in"));
       try {
         while(file.readLine() != null){
           line = file.readLine();
-          list.add(line);
+          if(line!=null){
+          list.add(line.toUpperCase());
+          }
         }
       } catch (IOException e) {
         // TODO Auto-generated catch block
@@ -38,10 +41,11 @@ public class GeneAnnotator extends JCasAnnotator_ImplBase {
     
       ////////////////////////
       while (NounIterator.hasNext()) {
+        
         Noun nounId = (Noun)NounIterator.next();
         String nounText = aJCas.getDocumentText().substring(nounId.getBegin(), nounId.getEnd());
-          
-        if(list.contains(nounText)){
+        if(nounText != null){
+        if(list.contains(nounText.toUpperCase())){
           Integer positionfirst=nounId.getBegin();
           Integer positionlast=nounId.getEnd();
           Genemarker geneAnnotation=new Genemarker(aJCas);
@@ -50,7 +54,7 @@ public class GeneAnnotator extends JCasAnnotator_ImplBase {
           geneAnnotation.setGeneId(nounId.getNounId());
           geneAnnotation.setGeneName(nounText);
           geneAnnotation.addToIndexes(); 
-        
+        }
         }
       }
     }catch (IOException e) {
