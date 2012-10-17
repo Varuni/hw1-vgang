@@ -10,7 +10,7 @@
     <casProcessors casPoolSize="3" processingUnitThreadCount="1">
         <casProcessor deployment="integrated" name="CpeDescriptor">
             <descriptor>
-                <import location="/home/varuni/11791/hw1-vgang_old/src/main/resources/descriptors/ner/aeDescriptor.xml"/>
+                <import location="/home/varuni/11791/hw1-vgang/src/main/resources/descriptors/ner/aeDescriptor.xml"/>
             </descriptor>
             <deploymentParameters/>
             <errorHandling>
@@ -23,13 +23,13 @@
                 <nameValuePair>
                     <name>INPUT_FILE</name>
                     <value>
-                        <string>/home/varuni/11791/hw1-vgang_old/src/main/resources/data/sample.in</string>
+                        <string>/home/varuni/11791/hw1-vgang/src/main/resources/data/sample.in</string>
                     </value>
                 </nameValuePair>
                 <nameValuePair>
                     <name>OUTPUT_FILE</name>
                     <value>
-                        <string>/home/varuni/11791/hw1-vgang_old/src/main/resources/data/test.out</string>
+                        <string>/home/varuni/11791/hw1-vgang/src/main/resources/data/test.out</string>
                     </value>
                 </nameValuePair>
             </configurationParameterSettings>

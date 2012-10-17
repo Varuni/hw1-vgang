@@ -22,7 +22,7 @@ public class GeneCasConsumer extends CasConsumer_ImplBase {
   public void initialize() {
 
     try {
-    output = new File("/home/varuni/11791/hw1-vgang_old/src/main/resources/data/test.out");
+    output = new File("/home/varuni/11791/hw1-vgang/src/main/resources/data/test.out");
     writer = new BufferedWriter(new FileWriter(output));
     } catch (Exception e) {
       e.printStackTrace();

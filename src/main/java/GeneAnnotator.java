@@ -41,7 +41,7 @@ public class GeneAnnotator extends JCasAnnotator_ImplBase {
     String line;
     try {
 
-      file = new BufferedReader(new FileReader("/home/varuni/11791/hw1-vgang_old/genenames.in"));
+      file = new BufferedReader(new FileReader("/home/varuni/11791/hw1-vgang/genenames.in"));
       try {
         while (file.readLine() != null) {
           line = file.readLine();
