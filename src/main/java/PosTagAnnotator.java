@@ -46,6 +46,7 @@ public class PosTagAnnotator extends JCasAnnotator_ImplBase {
           nounAnnotation.setBegin(sequenceId.getBegin() + positionfirst);
           nounAnnotation.setEnd(sequenceId.getBegin() + positionlast);
           nounAnnotation.setNounId(sequenceId.getSentenceId());
+          nounAnnotation.setSentenceBegin(sequenceId.getBegin());
           nounAnnotation.addToIndexes();
         }
       } catch (ResourceInitializationException e) {

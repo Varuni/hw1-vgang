@@ -11,32 +11,38 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Progress;
 
-
+/**
+ * This collection reader takes the file “sample.in” as input and reads it line by line and uses
+ * getnext method to generate cas. These cas are further passed to the annotators for annotations.
+ * 
+ * @author varuni
+ * 
+ */
 public class sequenceCollectionReader extends CollectionReader_ImplBase {
 
-  private String nextSentence;
-  private BufferedReader in;
+  private BufferedReader br;
+
   private int read = 1;
+
   String cas = "";
+
   public void initialize() throws ResourceInitializationException {
     String input = (String) getConfigParameterValue("INPUT_FILE");
+    System.out.println(input);
     FileReader file;
     System.out.println("Initializing Collection Reader");
     try {
       file = new FileReader(input);
-      in = new BufferedReader(file);
-      System.out.println(input);
-       int i=0;
-       char chars[]=new char[4096];
-      while( (in.read(chars))!=-1 ){
-        //System.out.println("Collection Reader: reading line by line");
-        //System.out.println(nextSentence);
-        cas+=new String(chars);
-        //cas = cas + "\n" + nextSentence;
-        chars=null;
-        chars=new char[4096];
+      br = new BufferedReader(file);
+
+      char myBuffer[] = new char[4096];
+      while ((br.read(myBuffer)) != -1) {
+        cas += new String(myBuffer);
+        myBuffer = null;
+        myBuffer = new char[4096];
       }
-      in.close();
+
+      br.close();
     } catch (FileNotFoundException e) {
       e.printStackTrace();
     } catch (IOException e) {
@@ -44,10 +50,8 @@ public class sequenceCollectionReader extends CollectionReader_ImplBase {
     }
   }
 
-  
   @Override
   public void getNext(CAS aCAS) throws IOException, CollectionException {
-    // TODO Auto-generated method stub
     System.out.println("Collection Reader:getNext");
     JCas jcas;
     try {
@@ -57,26 +61,24 @@ public class sequenceCollectionReader extends CollectionReader_ImplBase {
     }
     jcas.setDocumentText(cas);
     read = 0;
-
   }
 
   @Override
   public void close() throws IOException {
-    // TODO Auto-generated method stub
-    in.close();
+    br.close();
   }
 
   @Override
   public Progress[] getProgress() {
-    // TODO Auto-generated method stub
+
     return null;
   }
 
   @Override
   public boolean hasNext() throws IOException, CollectionException {
-    // TODO Auto-generated method stub
     System.out.println("Collection Reader:hasNext");
-    if(read == 1) return true;
+    if (read == 1)
+      return true;
     return false;
   }
 

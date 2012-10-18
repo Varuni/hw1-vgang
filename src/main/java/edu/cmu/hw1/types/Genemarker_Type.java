@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Wed Oct 17 11:24:23 EDT 2012
+ * Updated by JCasGen Wed Oct 17 22:51:30 EDT 2012
  * @generated */
 public class Genemarker_Type extends Annotation_Type {
   /** @generated */
@@ -79,6 +79,24 @@ public class Genemarker_Type extends Annotation_Type {
     ll_cas.ll_setStringValue(addr, casFeatCode_geneName, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_sentenceBegin;
+  /** @generated */
+  final int     casFeatCode_sentenceBegin;
+  /** @generated */ 
+  public int getSentenceBegin(int addr) {
+        if (featOkTst && casFeat_sentenceBegin == null)
+      jcas.throwFeatMissing("sentenceBegin", "edu.cmu.hw1.types.Genemarker");
+    return ll_cas.ll_getIntValue(addr, casFeatCode_sentenceBegin);
+  }
+  /** @generated */    
+  public void setSentenceBegin(int addr, int v) {
+        if (featOkTst && casFeat_sentenceBegin == null)
+      jcas.throwFeatMissing("sentenceBegin", "edu.cmu.hw1.types.Genemarker");
+    ll_cas.ll_setIntValue(addr, casFeatCode_sentenceBegin, v);}
+    
+  
 
 
 
@@ -95,6 +113,10 @@ public class Genemarker_Type extends Annotation_Type {
  
     casFeat_geneName = jcas.getRequiredFeatureDE(casType, "geneName", "uima.cas.String", featOkTst);
     casFeatCode_geneName  = (null == casFeat_geneName) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_geneName).getCode();
+
+ 
+    casFeat_sentenceBegin = jcas.getRequiredFeatureDE(casType, "sentenceBegin", "uima.cas.Integer", featOkTst);
+    casFeatCode_sentenceBegin  = (null == casFeat_sentenceBegin) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_sentenceBegin).getCode();
 
   }
 }

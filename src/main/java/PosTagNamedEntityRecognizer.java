@@ -15,6 +15,11 @@ import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
 
+/**
+ * A simple name entity recognition program based on Stanford CoreNLP tool
+ * @author varuni
+ *
+ */
 public class PosTagNamedEntityRecognizer {
 
   private StanfordCoreNLP pipeline;

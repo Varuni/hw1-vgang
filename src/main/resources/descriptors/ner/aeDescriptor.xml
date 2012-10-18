@@ -3,11 +3,11 @@
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <primitive>false</primitive>
   <delegateAnalysisEngineSpecifiers>
-    <delegateAnalysisEngine key="PosTagAnnotator">
-      <import location="PosTagAnnotator.xml"/>
-    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="GeneAnnotator">
       <import location="GeneAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="PosTagAnnotator">
+      <import location="PosTagAnnotator.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="SentenceAnnotator">
       <import location="SentenceAnnotator.xml"/>
@@ -30,31 +30,11 @@
     <fsIndexCollection/>
     <capabilities>
       <capability>
-        <inputs>
-          <type>edu.cmu.hw1.types.Sentence</type>
-          <type>edu.cmu.hw1.types.Noun</type>
-          <type>edu.cmu.hw1.types.Genemarker</type>
-          <feature>edu.cmu.hw1.types.Genemarker:geneName</feature>
-          <feature>edu.cmu.hw1.types.Genemarker:geneId</feature>
-          <feature>edu.cmu.hw1.types.Genemarker:end</feature>
-          <feature>edu.cmu.hw1.types.Genemarker:begin</feature>
-          <feature>edu.cmu.hw1.types.Noun:NounId</feature>
-          <feature>edu.cmu.hw1.types.Noun:end</feature>
-          <feature>edu.cmu.hw1.types.Noun:begin</feature>
-          <feature>edu.cmu.hw1.types.Sentence:SentenceId</feature>
-          <feature>edu.cmu.hw1.types.Sentence:end</feature>
-          <feature>edu.cmu.hw1.types.Sentence:begin</feature>
-        </inputs>
+        <inputs/>
         <outputs>
-          <type>edu.cmu.hw1.types.Noun</type>
-          <type>edu.cmu.hw1.types.Genemarker</type>
-          <feature>edu.cmu.hw1.types.Genemarker:geneName</feature>
-          <feature>edu.cmu.hw1.types.Genemarker:geneId</feature>
-          <feature>edu.cmu.hw1.types.Genemarker:end</feature>
-          <feature>edu.cmu.hw1.types.Genemarker:begin</feature>
-          <feature>edu.cmu.hw1.types.Noun:NounId</feature>
-          <feature>edu.cmu.hw1.types.Noun:end</feature>
-          <feature>edu.cmu.hw1.types.Noun:begin</feature>
+          <type allAnnotatorFeatures="true">edu.cmu.hw1.types.Sentence</type>
+          <type allAnnotatorFeatures="true">edu.cmu.hw1.types.Noun</type>
+          <type allAnnotatorFeatures="true">edu.cmu.hw1.types.Genemarker</type>
         </outputs>
         <languagesSupported/>
       </capability>

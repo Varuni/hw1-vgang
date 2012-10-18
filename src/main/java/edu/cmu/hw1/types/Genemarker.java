@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Wed Oct 17 11:24:23 EDT 2012
- * XML source: /home/varuni/11791/hw1-vgang_old/src/main/resources/descriptors/ner/PosTagAnnotator.xml
+ * Updated by JCasGen Wed Oct 17 22:51:30 EDT 2012
+ * XML source: /home/varuni/11791/hw1-vgang/src/main/resources/descriptors/ner/typeSystemDescriptor.xml
  * @generated */
 public class Genemarker extends Annotation {
   /** @generated
@@ -96,6 +96,24 @@ public class Genemarker extends Annotation {
     if (Genemarker_Type.featOkTst && ((Genemarker_Type)jcasType).casFeat_geneName == null)
       jcasType.jcas.throwFeatMissing("geneName", "edu.cmu.hw1.types.Genemarker");
     jcasType.ll_cas.ll_setStringValue(addr, ((Genemarker_Type)jcasType).casFeatCode_geneName, v);}    
+   
+    
+  //*--------------*
+  //* Feature: sentenceBegin
+
+  /** getter for sentenceBegin - gets 
+   * @generated */
+  public int getSentenceBegin() {
+    if (Genemarker_Type.featOkTst && ((Genemarker_Type)jcasType).casFeat_sentenceBegin == null)
+      jcasType.jcas.throwFeatMissing("sentenceBegin", "edu.cmu.hw1.types.Genemarker");
+    return jcasType.ll_cas.ll_getIntValue(addr, ((Genemarker_Type)jcasType).casFeatCode_sentenceBegin);}
+    
+  /** setter for sentenceBegin - sets  
+   * @generated */
+  public void setSentenceBegin(int v) {
+    if (Genemarker_Type.featOkTst && ((Genemarker_Type)jcasType).casFeat_sentenceBegin == null)
+      jcasType.jcas.throwFeatMissing("sentenceBegin", "edu.cmu.hw1.types.Genemarker");
+    jcasType.ll_cas.ll_setIntValue(addr, ((Genemarker_Type)jcasType).casFeatCode_sentenceBegin, v);}    
   }
 
     

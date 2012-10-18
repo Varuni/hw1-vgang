@@ -20,16 +20,10 @@
     <capabilities>
       <capability>
         <inputs>
-          <type>edu.cmu.hw1.types.Sentence</type>
-          <feature>edu.cmu.hw1.types.Sentence:SentenceId</feature>
-          <feature>edu.cmu.hw1.types.Sentence:end</feature>
-          <feature>edu.cmu.hw1.types.Sentence:begin</feature>
+          <type allAnnotatorFeatures="true">edu.cmu.hw1.types.Sentence</type>
         </inputs>
         <outputs>
-          <type>edu.cmu.hw1.types.Noun</type>
-          <feature>edu.cmu.hw1.types.Noun:NounId</feature>
-          <feature>edu.cmu.hw1.types.Noun:end</feature>
-          <feature>edu.cmu.hw1.types.Noun:begin</feature>
+          <type allAnnotatorFeatures="true">edu.cmu.hw1.types.Noun</type>
         </outputs>
         <languagesSupported/>
       </capability>

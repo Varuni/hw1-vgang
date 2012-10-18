@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Wed Oct 17 11:24:23 EDT 2012
- * XML source: /home/varuni/11791/hw1-vgang_old/src/main/resources/descriptors/ner/PosTagAnnotator.xml
+ * Updated by JCasGen Wed Oct 17 22:51:30 EDT 2012
+ * XML source: /home/varuni/11791/hw1-vgang/src/main/resources/descriptors/ner/typeSystemDescriptor.xml
  * @generated */
 public class Sentence extends Annotation {
   /** @generated

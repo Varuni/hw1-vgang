@@ -20,21 +20,11 @@
     <capabilities>
       <capability>
         <inputs>
-          <type>edu.cmu.hw1.types.Noun</type>
-          <type>edu.cmu.hw1.types.Sentence</type>
-          <feature>edu.cmu.hw1.types.Sentence:SentenceId</feature>
-          <feature>edu.cmu.hw1.types.Sentence:end</feature>
-          <feature>edu.cmu.hw1.types.Sentence:begin</feature>
-          <feature>edu.cmu.hw1.types.Noun:NounId</feature>
-          <feature>edu.cmu.hw1.types.Noun:end</feature>
-          <feature>edu.cmu.hw1.types.Noun:begin</feature>
+          <type allAnnotatorFeatures="true">edu.cmu.hw1.types.Sentence</type>
+          <type allAnnotatorFeatures="true">edu.cmu.hw1.types.Noun</type>
         </inputs>
         <outputs>
-          <type>edu.cmu.hw1.types.Genemarker</type>
-          <feature>edu.cmu.hw1.types.Genemarker:geneName</feature>
-          <feature>edu.cmu.hw1.types.Genemarker:geneId</feature>
-          <feature>edu.cmu.hw1.types.Genemarker:end</feature>
-          <feature>edu.cmu.hw1.types.Genemarker:begin</feature>
+          <type allAnnotatorFeatures="true">edu.cmu.hw1.types.Genemarker</type>
         </outputs>
         <languagesSupported/>
       </capability>
