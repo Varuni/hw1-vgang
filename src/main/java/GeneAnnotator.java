@@ -41,7 +41,7 @@ public class GeneAnnotator extends JCasAnnotator_ImplBase {
     String line;
     try {
 
-      file = new BufferedReader(new FileReader("src/main/resources/data/genenames.in"));
+      file = new BufferedReader(new FileReader("data/genenames.in"));
       try {
         while (file.readLine() != null) {
           line = file.readLine();
