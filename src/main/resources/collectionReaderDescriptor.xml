@@ -19,7 +19,7 @@
       <nameValuePair>
         <name>INPUT_FILE</name>
         <value>
-          <string>src/main/resources/data/sample.in</string>
+          <string>data/sample.in</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>

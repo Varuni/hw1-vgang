@@ -23,13 +23,13 @@
                 <nameValuePair>
                     <name>INPUT_FILE</name>
                     <value>
-                        <string>src/main/resources/data/sample.in</string>
+                        <string>data/sample.in</string>
                     </value>
                 </nameValuePair>
                 <nameValuePair>
                     <name>OUTPUT_FILE</name>
                     <value>
-                        <string>src/main/resources/data/test.out</string>
+                        <string>data/test.out</string>
                     </value>
                 </nameValuePair>
             </configurationParameterSettings>
