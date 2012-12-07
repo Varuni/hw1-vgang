@@ -21,7 +21,7 @@ public class SentenceAnnotator extends JCasAnnotator_ImplBase {
     String SentenceText = aJCas.getDocumentText();
     String lines[] = SentenceText.split("\\r?\\n");
     int firstPosition = 0;
-    System.out.println("Starting Annotation of text");
+    System.out.println("Document splitted into line: Now starting Annotation of text");
     for (int i = 0; i < lines.length; i++) {
 
       String[] token = lines[i].split(" "); // Splitting the sentence into token.

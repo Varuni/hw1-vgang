@@ -53,6 +53,7 @@ public class GeneCasConsumer extends CasConsumer_ImplBase {
     String geneId, geneName;
     int positionfirst, positionlast;
     positionfirst = positionlast = -1;
+    System.out.println("Final results after all the annotating: writting to hw1-vgang.out file");
     while (it.hasNext()) {
       Genemarker annotation = (Genemarker) it.next();
       geneId = annotation.getGeneId();
@@ -88,6 +89,7 @@ public class GeneCasConsumer extends CasConsumer_ImplBase {
   public void writeIntoFile(String geneId, String geneName, int positionfirst, int positionlast)
           throws Exception {
     writer.write(geneId + "|" + positionfirst + " " + positionlast + "|" + geneName);
+    System.out.println(geneId + "|" + positionfirst + " " + positionlast + "|" + geneName + "\n");
     writer.newLine();
     writer.flush();
   }

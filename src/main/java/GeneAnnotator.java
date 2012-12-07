@@ -40,7 +40,8 @@ public class GeneAnnotator extends JCasAnnotator_ImplBase {
     ArrayList<String> list = new ArrayList<String>(max);
     String line;
     try {
-
+      System.out.println("Completed Implementation of Stanford CoreNLP tool for recognising nouns from the sentences");
+      System.out.println("Now comapring with international nucleotide sequence databases for gene name annotation: Please wait");
       file = new BufferedReader(new FileReader("data/genenames.in"));
       try {
         while (file.readLine() != null) {

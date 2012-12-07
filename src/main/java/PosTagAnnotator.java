@@ -27,6 +27,7 @@ public class PosTagAnnotator extends JCasAnnotator_ImplBase {
     FSIndex SentenceIndex = aJCas.getAnnotationIndex(Sentence.type);
     Iterator SentenceIterator = SentenceIndex.iterator();
     // loop for each sentence
+    System.out.println("Implementing Stanford CoreNLP tool for recognising nouns from the sentence");
     while (SentenceIterator.hasNext()) {
 
       Sentence sequenceId = (Sentence) SentenceIterator.next();
